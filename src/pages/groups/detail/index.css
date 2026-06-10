@@ -1,0 +1,526 @@
+.detail-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding-bottom: 160rpx;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* 结算卡片 */
+.settlement-card {
+  background: #fff;
+  margin: 20rpx 24rpx;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.06);
+}
+
+.settlement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.settlement-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.settlement-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1c1c1e;
+}
+
+.settlement-count {
+  font-size: 24rpx;
+  color: #8e8e93;
+}
+
+.settlement-clear {
+  font-size: 28rpx;
+  color: #34c759;
+  margin-bottom: 16rpx;
+}
+
+.suggestions {
+  margin-bottom: 20rpx;
+}
+
+.suggestion-row {
+  display: flex;
+  align-items: center;
+  padding: 12rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.suggestion-from { color: #ff3b30; font-size: 28rpx; font-weight: 500; }
+.suggestion-arrow { color: #8e8e93; font-size: 26rpx; }
+.suggestion-to   { color: #34c759; font-size: 28rpx; font-weight: 500; }
+.suggestion-amount {
+  margin-left: auto;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+.settle-btn {
+  background-color: #007AFF !important;
+  color: #fff !important;
+  border-radius: 12rpx !important;
+  font-size: 28rpx !important;
+  font-weight: 600 !important;
+  height: 80rpx !important;
+  line-height: 80rpx !important;
+  margin-top: 8rpx;
+}
+
+.settle-btn-disabled {
+  background-color: #c7c7cc !important;
+}
+
+/* Tab */
+.tab-bar {
+  display: flex;
+  background: #fff;
+  margin: 0 24rpx 16rpx;
+  border-radius: 16rpx;
+  padding: 8rpx;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx;
+  font-size: 28rpx;
+  color: #8e8e93;
+  border-radius: 12rpx;
+}
+
+.tab-active {
+  background: #007AFF;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 账单列表 */
+.bills-scroll { height: 60vh; }
+
+.bill-row {
+  margin: 0 24rpx 16rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.04);
+}
+
+.bill-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  background: #e8f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  color: #007AFF;
+  font-weight: 700;
+  margin-right: 24rpx;
+}
+
+.bill-icon-settled { background: #f0f0f0; color: #8e8e93; }
+
+.bill-info { flex: 1; }
+.bill-title { font-size: 30rpx; font-weight: 500; color: #1c1c1e; }
+.bill-title-settled { color: #8e8e93; }
+.bill-date { font-size: 24rpx; color: #8e8e93; margin-top: 6rpx; }
+
+.settled-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8rpx 24rpx 16rpx;
+  padding: 16rpx 8rpx;
+}
+.settled-header-text { font-size: 26rpx; color: #8e8e93; }
+.settled-header-toggle { font-size: 24rpx; color: #007AFF; }
+
+.bill-amount-col { text-align: right; }
+.bill-total { font-size: 30rpx; font-weight: 700; color: #1c1c1e; }
+.bill-total-settled { color: #8e8e93; }
+.bill-tag-settled { font-size: 22rpx; color: #8e8e93; margin-top: 4rpx; }
+.bill-tag-receive {
+  display: inline-block;
+  font-size: 22rpx;
+  color: #34c759;
+  background: #e8fdf0;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+  margin-top: 6rpx;
+}
+.bill-tag-owe {
+  display: inline-block;
+  font-size: 22rpx;
+  color: #ff3b30;
+  background: #ffeceb;
+  border-radius: 8rpx;
+  padding: 2rpx 12rpx;
+  margin-top: 6rpx;
+}
+
+/* 群组设置（默认货币） */
+.group-setting-card {
+  background: #fff;
+  border-radius: 16rpx;
+  margin: 0 24rpx 16rpx;
+  padding: 8rpx 24rpx;
+}
+.group-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx 0;
+}
+.group-setting-label { font-size: 28rpx; color: #1c1c1e; }
+.group-setting-value { font-size: 28rpx; color: #8e8e93; }
+.group-setting-toggle { font-size: 24rpx; color: #007AFF; margin-left: 8rpx; }
+
+.currency-list {
+  max-height: 480rpx;
+  border-top: 1rpx solid #f0f0f0;
+}
+.currency-option {
+  display: block;
+  padding: 24rpx 8rpx;
+  font-size: 28rpx;
+  color: #1c1c1e;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.currency-option-selected { color: #007AFF; font-weight: 600; }
+
+/* 成员列表 */
+.members-scroll { height: 60vh; }
+
+.member-row {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 0 24rpx 16rpx;
+}
+
+.member-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #e8f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+}
+
+.member-avatar-text { font-size: 36rpx; font-weight: 700; color: #007AFF; }
+.member-info { flex: 1; }
+.member-name { font-size: 30rpx; font-weight: 500; color: #1c1c1e; }
+.member-owner-tag {
+  font-size: 22rpx;
+  color: #ff9500;
+  background: #fff5e6;
+  padding: 2rpx 12rpx;
+  border-radius: 20rpx;
+  margin-top: 6rpx;
+  display: inline-block;
+}
+
+.member-balance { text-align: right; }
+.member-amount { font-size: 30rpx; font-weight: 700; }
+.member-balance-label { font-size: 22rpx; color: #8e8e93; margin-top: 4rpx; }
+.member-settled { font-size: 26rpx; color: #8e8e93; }
+
+/* FAB */
+.fab {
+  position: fixed;
+  bottom: 60rpx;
+  right: 48rpx;
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+  background: #007AFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(0,122,255,0.4);
+  z-index: 100;
+  transition: background 0.2s;
+}
+
+.fab-active {
+  background: #ff3b30;
+}
+
+.fab-icon {
+  font-size: 64rpx;
+  color: #fff;
+  line-height: 1;
+  margin-top: -4rpx;
+  transition: transform 0.25s;
+}
+
+.fab-icon-rotated {
+  transform: rotate(45deg);
+}
+
+/* FAB 展开菜单遮罩 */
+.fab-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 98;
+}
+
+/* FAB 展开菜单 */
+.fab-menu {
+  position: fixed;
+  bottom: 196rpx;
+  right: 48rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  z-index: 99;
+}
+
+.fab-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20rpx;
+  flex-direction: row;
+}
+
+.fab-menu-label {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 10rpx 24rpx;
+  border-radius: 32rpx;
+}
+
+.fab-menu-icon {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.2);
+}
+
+.ocr-icon    { background: #ff9500; }
+.manual-icon { background: #34c759; }
+.invite-icon { background: #007AFF; }
+
+.empty-bills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100rpx;
+}
+
+.empty-bills-text { font-size: 28rpx; color: #8e8e93; }
+
+/* 货币转换按钮 */
+.currency-convert-btn {
+  padding: 8rpx 20rpx;
+  border-radius: 24rpx;
+  border: 1rpx solid #007AFF;
+  background: transparent;
+}
+
+.currency-convert-btn-active {
+  background: #e8f0ff;
+  border-color: #007AFF;
+}
+
+.currency-convert-btn-text {
+  font-size: 22rpx;
+  color: #007AFF;
+  font-weight: 500;
+}
+
+/* 多币种提示 */
+.multi-currency-notice {
+  background: #fff9e6;
+  border-radius: 10rpx;
+  padding: 14rpx 18rpx;
+  margin-bottom: 18rpx;
+  border-left: 4rpx solid #ff9500;
+}
+
+.multi-currency-notice-text {
+  font-size: 22rpx;
+  color: #8e6000;
+  line-height: 1.5;
+}
+
+/* 汇率弹窗遮罩 */
+.rate-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 弹窗主体 */
+.rate-modal {
+  width: 680rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 40rpx 36rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.rate-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.rate-modal-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+.rate-modal-close {
+  font-size: 48rpx;
+  color: #8e8e93;
+  line-height: 1;
+  padding: 0 4rpx;
+}
+
+.rate-modal-meta {
+  margin-bottom: 28rpx;
+}
+
+.rate-modal-target {
+  font-size: 26rpx;
+  color: #3c3c43;
+  display: block;
+}
+
+.rate-modal-time {
+  font-size: 22rpx;
+  color: #8e8e93;
+  margin-top: 6rpx;
+  display: block;
+}
+
+/* 加载中 */
+.rate-modal-loading {
+  display: flex;
+  justify-content: center;
+  padding: 40rpx 0;
+}
+
+.rate-modal-loading-text {
+  font-size: 28rpx;
+  color: #8e8e93;
+}
+
+/* 汇率行 */
+.rate-rows {
+  margin-bottom: 20rpx;
+}
+
+.rate-row {
+  display: flex;
+  align-items: center;
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.rate-row-label {
+  font-size: 26rpx;
+  color: #3c3c43;
+  white-space: nowrap;
+  margin-right: 12rpx;
+}
+
+.rate-row-input {
+  flex: 1;
+  height: 64rpx;
+  border: 1rpx solid #d1d1d6;
+  border-radius: 10rpx;
+  padding: 0 16rpx;
+  font-size: 28rpx;
+  color: #1c1c1e;
+  text-align: right;
+  background: #f9f9f9;
+}
+
+.rate-row-unit {
+  font-size: 24rpx;
+  color: #8e8e93;
+  margin-left: 12rpx;
+  white-space: nowrap;
+}
+
+/* 提示文字 */
+.rate-modal-hint {
+  font-size: 22rpx;
+  color: #8e8e93;
+  display: block;
+  margin-bottom: 28rpx;
+  line-height: 1.5;
+}
+
+/* 按钮行 */
+.rate-modal-actions {
+  display: flex;
+  gap: 20rpx;
+}
+
+.rate-modal-btn {
+  flex: 1;
+  height: 80rpx;
+  border-radius: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate-cancel-btn {
+  background: #f2f2f7;
+}
+
+.rate-confirm-btn {
+  background: #007AFF;
+}
+
+.rate-modal-btn-text {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #3c3c43;
+}
+
+.rate-confirm-text {
+  color: #fff;
+}

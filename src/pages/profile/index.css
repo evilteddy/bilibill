@@ -1,0 +1,142 @@
+.profile-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 0 0 48rpx;
+}
+
+.profile-header {
+  background: #fff;
+  padding: 60rpx 36rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.profile-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007AFF, #5ac8fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rpx;
+}
+
+.profile-avatar-text {
+  font-size: 72rpx;
+  font-weight: 700;
+  color: #fff;
+}
+
+.profile-name-row {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.profile-name {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+.edit-btn {
+  font-size: 26rpx;
+  color: #007AFF;
+  padding: 6rpx 20rpx;
+  border-radius: 16rpx;
+  background: #f0f6ff;
+}
+
+.profile-edit-row {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.name-input {
+  border-bottom: 2rpx solid #007AFF;
+  font-size: 36rpx;
+  color: #1c1c1e;
+  padding-bottom: 8rpx;
+  min-width: 200rpx;
+}
+
+.save-btn {
+  font-size: 26rpx;
+  color: #fff;
+  background: #007AFF;
+  padding: 8rpx 24rpx;
+  border-radius: 16rpx;
+}
+
+.cancel-btn {
+  font-size: 26rpx;
+  color: #8e8e93;
+}
+
+.profile-email {
+  font-size: 26rpx;
+  color: #8e8e93;
+}
+
+.info-section {
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 0 24rpx 24rpx;
+  padding: 8rpx 28rpx;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-label { font-size: 30rpx; color: #1c1c1e; }
+.info-value { font-size: 28rpx; color: #8e8e93; }
+.uid-text { font-family: monospace; font-size: 24rpx; }
+
+.logout-section {
+  margin: 0 24rpx;
+}
+
+.btn-logout {
+  background-color: #fff !important;
+  color: #ff3b30 !important;
+  border: 2rpx solid #ff3b30 !important;
+  border-radius: 16rpx !important;
+  font-size: 30rpx !important;
+  height: 96rpx !important;
+  line-height: 96rpx !important;
+}
+
+.profile-avatar-guest {
+  background: #e5e5ea !important;
+}
+
+.profile-avatar-guest .profile-avatar-text {
+  color: #8e8e93;
+}
+
+.guest-login-link {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #007AFF;
+  padding: 8rpx 24rpx;
+}
+
+.guest-login-tip {
+  font-size: 26rpx;
+  color: #8e8e93;
+}
+
+.info-row-tappable {
+  padding: 24rpx 0;
+}

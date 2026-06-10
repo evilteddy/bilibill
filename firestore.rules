@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 用户只能读写自己的文档
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    match /groups/{groupId} {
+      // 邀请码查找需要 list（fetchGroups / joinGroup 均通过 query 读取）
+      allow list: if request.auth != null;
+
+      // 单文档读取：仅成员
+      allow get: if request.auth != null
+                 && request.auth.uid in resource.data.memberIDs;
+
+      allow create: if request.auth != null;
+
+      allow update: if request.auth != null && (
+        // 已是成员：可正常更新
+        request.auth.uid in resource.data.memberIDs
+        // 自助加入：仅把自己加入 memberIDs，不得篡改关键字段、不得移除现有成员
+        || (
+          !(request.auth.uid in resource.data.memberIDs)
+          && request.auth.uid in request.resource.data.memberIDs
+          && request.resource.data.memberIDs.hasAll(resource.data.memberIDs)
+          && request.resource.data.memberIDs.size() == resource.data.memberIDs.size() + 1
+          && request.resource.data.createdBy == resource.data.createdBy
+          && request.resource.data.inviteCode == resource.data.inviteCode
+          && request.resource.data.name == resource.data.name
+        )
+      );
+
+      allow delete: if request.auth != null
+                    && request.auth.uid == resource.data.createdBy;
+
+      // members 子集合：成员可读写（加入后写入自己的成员记录）
+      match /members/{uid} {
+        allow read, write: if request.auth != null
+                  && request.auth.uid in get(/databases/$(database)/documents/groups/$(groupId)).data.memberIDs;
+      }
+
+      // bills 子集合：群成员可读写本群账单
+      match /bills/{billId} {
+        allow read, write: if request.auth != null
+                  && request.auth.uid in get(/databases/$(database)/documents/groups/$(groupId)).data.memberIDs;
+      }
+    }
+  }
+}

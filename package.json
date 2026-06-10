@@ -1,0 +1,35 @@
+{
+  "name": "bilibill-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "一键分账微信小程序",
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "dev:weapp": "taro build --type weapp --watch",
+    "build:h5": "taro build --type h5",
+    "dev:h5": "taro build --type h5 --watch"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@tarojs/components": "4.x",
+    "@tarojs/plugin-framework-react": "^4.1.11",
+    "@tarojs/plugin-platform-weapp": "4.x",
+    "@tarojs/react": "4.x",
+    "@tarojs/runtime": "4.x",
+    "@tarojs/taro": "4.x",
+    "firebase": "^10.14.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@tarojs/cli": "4.x",
+    "@tarojs/webpack5-runner": "4.x",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "babel-preset-taro": "4.x",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,90 @@
+.detail-scroll { background: #f5f5f5; height: 100vh; padding: 24rpx; width: 100%; box-sizing: border-box; }
+.loading { display: flex; align-items: center; justify-content: center; height: 100vh; }
+
+.amount-card {
+  background: #007AFF;
+  border-radius: 24rpx;
+  padding: 48rpx 36rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.amount-label { font-size: 26rpx; color: rgba(255,255,255,0.7); }
+.amount-value { display: block; font-size: 72rpx; font-weight: 700; color: #fff; margin: 8rpx 0; }
+.amount-title { font-size: 30rpx; color: rgba(255,255,255,0.9); }
+
+.status-badge {
+  display: inline-block;
+  margin-top: 20rpx;
+  padding: 8rpx 24rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.status-open { background: rgba(255,255,255,0.2); color: #fff; }
+.status-settled { background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); }
+
+.info-card, .splits-card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.info-row:last-child { border-bottom: none; }
+.info-label { font-size: 28rpx; color: #8e8e93; }
+.info-value { font-size: 28rpx; color: #1c1c1e; }
+
+.splits-title { font-size: 28rpx; font-weight: 600; color: #1c1c1e; margin-bottom: 20rpx; }
+
+.split-row {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+  gap: 16rpx;
+}
+
+.split-row:last-child { border-bottom: none; }
+
+.split-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #e8f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #007AFF;
+}
+
+.split-name { flex: 1; font-size: 28rpx; color: #1c1c1e; }
+.payer-tag {
+  font-size: 22rpx;
+  color: #34c759;
+  background: #e8fdf0;
+  padding: 4rpx 16rpx;
+  border-radius: 12rpx;
+}
+
+.split-amount { font-size: 28rpx; font-weight: 600; color: #1c1c1e; }
+.text-red { color: #ff3b30; }
+
+.btn-edit-bill {
+  margin: 8rpx 0 32rpx;
+  background: #fff;
+  color: #007AFF;
+  border: 2rpx solid #007AFF;
+  border-radius: 16rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}

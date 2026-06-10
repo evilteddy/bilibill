@@ -1,0 +1,176 @@
+.manual-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.manual-scroll {
+  flex: 1;
+}
+
+.form-section {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin: 24rpx 24rpx 0;
+}
+
+.section-title {
+  font-size: 26rpx;
+  color: #8e8e93;
+  margin-bottom: 20rpx;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header .section-title { margin-bottom: 0; }
+
+.payer-current {
+  font-size: 28rpx;
+  color: #1c1c1e;
+  font-weight: 600;
+}
+
+.payer-toggle {
+  font-size: 24rpx;
+  color: #007AFF;
+  font-weight: 400;
+  margin-left: 8rpx;
+}
+
+.form-row {
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.form-row:last-child { border-bottom: none; }
+
+.form-label {
+  font-size: 28rpx;
+  color: #8e8e93;
+  margin-bottom: 10rpx;
+}
+
+.form-input {
+  font-size: 30rpx;
+  color: #1c1c1e;
+  width: 100%;
+}
+
+.amount-row {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.currency-tag {
+  color: #007AFF;
+  font-size: 30rpx;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.amount-input {
+  flex: 1;
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #1c1c1e;
+  text-align: right;
+}
+
+.currency-list {
+  max-height: 320rpx;
+  background: #f9f9f9;
+  border-radius: 12rpx;
+  margin-top: 16rpx;
+}
+
+.currency-option {
+  display: block;
+  padding: 20rpx 24rpx;
+  font-size: 28rpx;
+  color: #1c1c1e;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.currency-option-selected {
+  color: #007AFF;
+  font-weight: 600;
+  background: #f0f6ff;
+}
+
+/* 成员行 */
+.member-row {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+  gap: 20rpx;
+}
+
+.member-row:last-child { border-bottom: none; }
+
+.member-row-selected .member-name { color: #007AFF; font-weight: 500; }
+
+.member-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  background: #e8f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #007AFF;
+}
+
+.member-name { flex: 1; font-size: 28rpx; color: #1c1c1e; }
+.check-icon { color: #007AFF; font-size: 32rpx; font-weight: 700; }
+
+.check-box {
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+  border: 2rpx solid #c7c7cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-box-checked { background: #007AFF; border-color: #007AFF; }
+.check-inner { color: #fff; font-size: 24rpx; font-weight: 700; }
+
+.per-person { font-size: 24rpx; color: #8e8e93; }
+
+.select-all-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20rpx;
+}
+
+.select-all-btn { font-size: 26rpx; color: #007AFF; }
+.per-person-summary { font-size: 26rpx; color: #8e8e93; }
+
+/* 底部按钮 */
+.manual-footer {
+  padding: 24rpx;
+  background: #fff;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.btn-save {
+  background-color: #007AFF !important;
+  color: #fff !important;
+  border-radius: 16rpx !important;
+  font-size: 32rpx !important;
+  font-weight: 600 !important;
+  height: 96rpx !important;
+  line-height: 96rpx !important;
+}

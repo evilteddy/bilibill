@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.swc/
+
+# Logs
+log/
+*.log
+
+# Firebase
+.firebase/
+
+# Misc
+.DS_Store
+
+# Sensitive config
+project.private.config.json
